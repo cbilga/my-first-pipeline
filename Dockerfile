@@ -8,4 +8,5 @@ RUN npm install
 COPY ./app.js ./app.js
 COPY ./src ./src
 EXPOSE 5050
+
 CMD npm start app.js --port 5050
