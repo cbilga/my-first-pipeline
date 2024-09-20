@@ -3,7 +3,7 @@ name: Docker deploy
 #on: workflow_call
 on:
     workflow_run:
-        workflows: [github-actions]
+        workflows: [Build and Test]
         types:
             - completed
 
