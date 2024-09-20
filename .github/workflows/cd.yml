@@ -19,6 +19,7 @@ jobs:
             docker_pta: ${{ secrets.DOCKER_PTA }}
         uses: docker/login-action@v3
         with:
+          registry: docker.io
           username: ${{ env.docker_login}}
           password: ${{ env.docker_pta }}
       -
