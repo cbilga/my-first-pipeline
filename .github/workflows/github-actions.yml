@@ -30,6 +30,3 @@ jobs:
                 VALIDATE_ALL_CODEBASE: false
                 DEFAULT_BRANCH: master
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    deploy:
-        name: Docker CD
-        uses: cbilga/my-first-pipeline/.github/workflows/cd.yml@main

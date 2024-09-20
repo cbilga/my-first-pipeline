@@ -1,7 +1,11 @@
 name: Docker deploy
 
 #on: workflow_call
-on: push
+on:
+    workflow_run:
+        workflows: [github-actions]
+        types:
+            - completed
 
 jobs:
   docker:
