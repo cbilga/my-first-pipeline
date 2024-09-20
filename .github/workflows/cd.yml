@@ -1,0 +1,10 @@
+name: Docker deploy
+
+on: workflow_call
+
+jobs:
+    runs-on: ubuntu-latest
+    jobs:
+        - name: Docker deploy
+        run: docker commit
+        - name: 

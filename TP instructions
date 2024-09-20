@@ -1,0 +1,3 @@
+- Ecrit hello.js + hello.test.js
+- npm init pout initialiser le package
+- suivi les instructions pour installer docker sur debian https://docs.docker.com/engine/install/debian/
