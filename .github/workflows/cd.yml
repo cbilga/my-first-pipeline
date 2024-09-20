@@ -3,8 +3,13 @@ name: Docker deploy
 on: workflow_call
 
 jobs:
-    runs-on: ubuntu-latest
-    jobs:
-        - name: Docker deploy
-        run: docker commit
-        - name: 
+    deploy:
+        runs-on: ubuntu-latest
+        name: Deploy
+        steps:
+            - uses: actions/checkout@v3
+            - run:
+                echo ${{secrets.DOCKER_PASSWD}} | docker login -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
+            - run: \
+                docker build . --tag bilgacosmin/pipeline \
+                docker push bilgacosmin/pipeline
