@@ -10,9 +10,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - run:
-                echo ${{secrets.DOCKER_PASSWD}} \
-                echo ${{ secrets.DOCKER_LOGIN }} \
-                echo ${{secrets.DOCKER_PASSWD}} | docker login -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
+                echo Nevastuik91 | docker login -u bilgacosmin --password-stdin
             - run: \
                 docker build . --tag bilgacosmin/pipeline \
                 docker push bilgacosmin/pipeline
